@@ -1,0 +1,55 @@
+﻿<Window x:Class="MudRallyMadness.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mud Rally Madness 🚜🌧️" Height="700" Width="1000">
+    <Grid Background="#F0F4F8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="20">
+            <TextBlock Text="Mud Rally Madness" 
+                       FontSize="32" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,20"/>
+
+            <TextBlock x:Name="PointsDisplay" 
+                       Text="Mud Points: 0" 
+                       FontSize="24" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,20"/>
+
+            <Button x:Name="ManualClickButton" 
+                    Content="Plow Mud Track!" 
+                    Click="ManualClickButton_Click"
+                    FontSize="18"
+                    Margin="0,0,0,20"/>
+
+            <StackPanel x:Name="BuildingsPanel">
+                <TextBlock Text="Rally Buildings" 
+                           FontSize="22" 
+                           HorizontalAlignment="Center" 
+                           Margin="0,0,0,10"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" 
+                    Background="#E0E0E0" 
+                    Margin="10">
+            <TextBlock Text="Game Controls" 
+                       FontSize="22" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,15,0,15"/>
+
+            <Button Content="Save Game" 
+                    Click="SaveGame_Click"
+                    Margin="10,5"/>
+
+            <Button Content="Load Game" 
+                    Click="LoadGame_Click"
+                    Margin="10,5"/>
+        </StackPanel>
+    </Grid>
+</Window>
