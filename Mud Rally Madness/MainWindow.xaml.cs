@@ -170,7 +170,7 @@ namespace MudRallyMadness
                 };
                 buildingPanel.Children.Add(countDisplay);
 
-                // Rest of the method remains the same...
+   
 
                 BuildingsPanel.Children.Add(border);
             }
@@ -220,9 +220,9 @@ namespace MudRallyMadness
             {
                 points -= building.BaseCost;
                 building.Count++;
-                building.BaseCost = (int)(building.BaseCost * 1.15); // Increase cost
+                building.BaseCost = (int)(building.BaseCost * 1.15);
 
-                // Update UI elements
+
                 UpdateBuildingUI(buildingKey, building);
 
                 UpdatePointsDisplay();
@@ -235,7 +235,7 @@ namespace MudRallyMadness
 
         private void UpdateBuildingUI(string buildingKey, Building building)
         {
-            // Find the button and update its text
+
             foreach (UIElement elem in BuildingsPanel.Children)
             {
                 if (elem is Border border && border.Child is StackPanel panel)
@@ -286,7 +286,7 @@ namespace MudRallyMadness
                 {
                     string jsonString = File.ReadAllText("mud_rally_save.json");
 
-                    // Use a more explicit deserialization approach
+     
                     var options = new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
@@ -294,11 +294,10 @@ namespace MudRallyMadness
 
                     var loadedState = JsonSerializer.Deserialize<GameState>(jsonString, options);
 
-                    // Explicitly set values
                     points = loadedState.Points;
                     buildings = loadedState.Buildings;
 
-                    // Recreate UI
+   
                     BuildingsPanel.Children.Clear();
                     CreateBuildingControls();
                     UpdatePointsDisplay();
@@ -316,7 +315,6 @@ namespace MudRallyMadness
             }
         }
 
-        // Add this class outside of MainWindow class
         class GameState
         {
             public int Points { get; set; }
