@@ -35,5 +35,6 @@ WPF (UI)
 JSON (Storing data)
 
 
+**Will sold to google for only 1,5 mil :3**
 
 **Disclaimer**: No actual Rally Cars or Drivers was harmed in the making of this game (yet). 🚜🌧️
